@@ -132,24 +132,24 @@ class _DefaultAccountView extends StatelessWidget {
         const SizedBox.square(dimension: kPadding8),
         _SelectNetworkButton(),
         const SizedBox.square(dimension: kPadding8),
-        AccountListItem(
-          iconPath: 'lib/modal/assets/icons/disconnect.svg',
-          trailing: _service.status.isLoading
-              ? Row(
-                  children: [
-                    CircularLoader(size: 18.0, strokeWidth: 2.0),
-                    SizedBox.square(dimension: kPadding12),
-                  ],
-                )
-              : const SizedBox.shrink(),
-          title: 'Disconnect',
-          titleStyle: themeData.textStyles.paragraph500.copyWith(
-            color: themeColors.foreground200,
-          ),
-          onTap: _service.status.isLoading
-              ? null
-              : () => _service.closeModal(disconnectSession: true),
-        ),
+        // AccountListItem(
+        //   iconPath: 'lib/modal/assets/icons/disconnect.svg',
+        //   trailing: _service.status.isLoading
+        //       ? Row(
+        //           children: [
+        //             CircularLoader(size: 18.0, strokeWidth: 2.0),
+        //             SizedBox.square(dimension: kPadding12),
+        //           ],
+        //         )
+        //       : const SizedBox.shrink(),
+        //   title: 'Disconnect',
+        //   titleStyle: themeData.textStyles.paragraph500.copyWith(
+        //     color: themeColors.foreground200,
+        //   ),
+        //   onTap: _service.status.isLoading
+        //       ? null
+        //       : () => _service.closeModal(disconnectSession: true),
+        // ),
       ],
     );
   }
